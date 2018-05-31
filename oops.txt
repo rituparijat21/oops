@@ -1,0 +1,172 @@
+1:
+class Circle:
+    def __init__(self,r):
+        self.radius=r
+
+    def getArea(self):
+        return 3.14*self.radius*self.radius
+
+    def getCircumference(self):
+        return 2*3.14*self.radius
+
+c=Circle(2)
+a=c.getArea()
+b=c.getCircumference()
+print("Area : ",a)
+print("Circumference : ",b)
+
+output:
+Area :  12.56
+Circumference :  12.56
+
+2:
+class Student:
+    def __init__(self,n,r):
+        self.name = n
+        self.rno = r
+
+    def display(self):
+        print('Name: {}, RollNo: {}'.format(self.name, self.rno))
+
+    def setAge(self,a):
+        self.age = a
+        print('Age : ', self.age)
+
+    def setMarks(self, m):
+        self.marks = m
+        print('Marks : ', self.marks)
+
+x=input("Enter name : ")
+y=int(input("Enter rollno : "))
+s1=Student(x,y)
+s1.display()
+a=int(input("Enter age : "))
+s1.display()
+s1.setAge(a)
+b=int(input("Enter marks : "))
+s1.display()
+s1.setAge(a)
+s1.setMarks(b)
+
+output:
+Enter name : Ritu
+Enter rollno : 21
+Name: Ritu, RollNo: 21
+Enter age : 21
+Name: Ritu, RollNo: 21
+Age :  21
+Enter marks : 97
+Name: Ritu, RollNo: 21
+Age :  21
+Marks :  97
+
+3:
+class Temperature:
+    def convertFarenheit(self,c):
+        self.farenheit=(9/5)*c+32
+        print("The temperature in farenheit is : ",self.farenheit)
+
+    def convertCelsius(self,f):
+        self.celsius=(f-32)*(5/9)
+        print("The temperature in celsius is : ",self.celsius)
+
+t=Temperature()
+a=int(input("Enter the temperature in celsius to convert in farenheit : 
+"))
+t.convertFarenheit(a)
+b=int(input("Enter the temperature in farenheit to convert in celsius : 
+"))
+t.convertCelsius(b)
+
+output:
+Enter the temperature in celsius to convert in farenheit :100
+The temperature in farenheit is :  212.0
+Enter the temperature in farenheit to convert in celsius :212
+The temperature in celsius is :  100.0
+
+4:
+class MovieDetails:
+    def __init__(self,m,a,y,r):
+        self.moviename = m
+        self.artistname = a
+        self.yearofrelease = y
+        self.ratings = r
+
+    def display(self):
+        print('Movie name : {}, Artist Name : {}, Year of Release : {}, 
+Ratings : {}'.
+              format(self.moviename,
+self.artistname,self.yearofrelease,self.ratings))
+
+    def add(self,m,a,y,r):
+        self.moviename = m
+        self.artistname = a
+        self.yearofrelease = y
+        self.ratings = r
+
+m1=MovieDetails('Razi','Aaliya Bhat','2018','8.6')
+m1.display()
+p=input("Enter movie name : ")
+q=input("Enter artist name : ")
+r=int(input("Enter year of release : "))
+s=float(input("Enter ratings : "))
+m2=MovieDetails(p,q,r,s)
+m2.display()
+
+output:
+Movie name : Razi, Artist Name : Aaliya Bhat, Year of Release : 2018, 
+Ratings : 8.6
+Enter movie name : Avengers:Infinity War
+Enter artist name : Robert Downey Jr
+Enter year of release : 2018
+Enter ratings : 8.6
+Movie name : Avengers:Infinity War, Artist Name : Robert Downey Jr, Year 
+of Release : 2018, Ratings : 8.6
+
+5:
+class Expenditure:
+    def __init__(self,sal,sav,cat,t,exp):
+        self.salary=sal
+        self.savings=sav
+        self.category=cat
+        self.total=t
+        self.expend=exp
+    def display(self):
+        print('Salary: {}, Savings: {}, Category: {},Total: 
+{},Expenditure:{}'.format(self.salary, 
+self.savings,self.category,self.total,self.expend))
+    def add(self,sav,exp):
+        self.savings=sav
+        self.expend=exp
+        total_expend=self.savings + self.expend
+    def expen(self,sav,exp):
+        self.savings = sav
+        self.expend = exp
+        total_expend = self.savings + self.expend
+        per_day=total_expend/365
+        per_month=total_expend/12
+x=int(input("Enter salary : "))
+y=int(input("Enter savings : "))
+z=input("Enter category : ")
+p=int(input("Enter total : "))
+s=int(input("Enter expenditure : "))
+s1=Expenditure(x,y,z,p,s)
+s1.display()
+s1.add(x,s)
+s1.exp(x,s)
+output:
+Enter salary : 100
+Enter savings : 10
+Enter category : savings
+Enter total : 110
+Enter expenditure : 500
+'Salary: 100, Savings: 10, Category: savings,Total: 110,Expenditure:500'
+total_expend=510
+total_expend=510
+per_day=1.39726027
+per_month=42.5
+
+
+
+
+
